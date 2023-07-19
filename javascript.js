@@ -19,7 +19,7 @@ const validateForm = () => {
 };
 
 
-const deleteTask = (i) => {
+const deleteIndex = (i) => {
   let tasks = JSON.parse(localStorage.getItem('datas'));
   tasks = tasks.filter((task) => task.description !== tasks[i].description);
   for (let i = 0; i < tasks.length; i += 1) {
@@ -67,7 +67,7 @@ const ul = document.createElement('ul');
 
 mainList.appendChild(ul);
 
-const showTask = (i) => {
+const taskIndex = (i) => {
   const li = document.createElement('li');
   li.classList.add('inside-list');
 
